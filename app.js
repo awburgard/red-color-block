@@ -27,6 +27,14 @@ $(document).ready(function() {
             blueCount--;
             $('#blueCount').text('Blue Count: ' + blueCount);
         }
+        if (boxClass.indexOf('green')!= -1){
+            greenCount--;
+            $('#greenCount').text('Green Count: ' + greenCount);
+        }
+        if (boxClass.indexOf('yellow')!= -1){
+            yellowCount--;
+            $('#yellowCount').text('Yellow Count: ' + yellowCount);
+        }
 
     })
 });
