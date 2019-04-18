@@ -1,8 +1,27 @@
 $(document).ready(function() {
     $('#redBtn').on('click', whenIclickTheRedButton);
+
+    $('#blueBtn').on('click', function(){
+        blueCount++;
+        $('#blueCount').text('Blue Count: ' + blueCount);
+        $('#container').append('<div class="box blue"></div>');
+    })
+    $('#greenBtn').on('click', function (){
+        greenCount++;
+        $('#greenCount').text('Green Count: ' + greenCount);
+        $('#container').append('<div class="box green"></div>');
+    })
+    $('#yellowBtn').on('click', function (){
+        yellowCount++;
+        $('#yellowCount').text('Yellow Count: ' + yellowCount);
+        $('#container').append('<div class="box yellow"></div>');
+    })
 });
 
 let redCount = 0;
+let blueCount = 0;
+let greenCount=0;
+let yellowCount =0;
 
 function whenIclickTheRedButton() {
     redCount++;
