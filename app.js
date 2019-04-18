@@ -16,12 +16,25 @@ $(document).ready(function() {
         $('#yellowCount').text('Yellow Count: ' + yellowCount);
         $('#container').append('<div class="box yellow"></div>');
     })
+    $('#container').on('click', function(event){
+        $(event.target).remove();
+        let boxClass = $(event.target).attr('class');
+        if (boxClass.indexOf('red')!= -1){
+            redCount--;
+            $('#redCount').text('Red Count: ' + redCount);
+        }
+        if (boxClass.indexOf('blue')!= -1){
+            blueCount--;
+            $('#blueCount').text('Blue Count: ' + blueCount);
+        }
+
+    })
 });
 
 let redCount = 0;
 let blueCount = 0;
-let greenCount=0;
-let yellowCount =0;
+let greenCount= 0;
+let yellowCount = 0;
 
 function whenIclickTheRedButton() {
     redCount++;
